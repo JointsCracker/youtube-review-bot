@@ -62,7 +62,7 @@ def transcribe_with_whisper(video_url):
 def summarize_text(text, language="en"):
     prompt = f"Summarize the following text in {language}:\n\n{text}"
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt},
